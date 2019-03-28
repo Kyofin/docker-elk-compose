@@ -6,3 +6,25 @@ network.host: 0.0.0.0
 network.publish_host: 10.91.1.4
 discovery.zen.ping.unicast.hosts: ["10.91.1.2"]
 discovery.zen.minimum_master_nodes: 1
+
+# Cross domain
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-methods : OPTIONS, HEAD, GET, POST, PUT, DELETE
+http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type, Content-Length
+
+
+# Search pool
+thread_pool.search.size: 13
+thread_pool.search.queue_size: 300
+# Bulk pool
+thread_pool.bulk.size: 9
+thread_pool.bulk.queue_size: 2000
+
+# Index pool
+thread_pool.index.size: 8
+thread_pool.index.queue_size: 300
+
+# Indices settings
+indices.memory.index_buffer_size: 30%
+
