@@ -1,0 +1,8 @@
+cluster.name: "elasticsearch"
+node.name: node-1.2
+node.master: false
+node.data: true
+network.host: 0.0.0.0
+network.publish_host: 10.91.1.2
+discovery.zen.ping.unicast.hosts: ["10.91.1.4"]
+discovery.zen.minimum_master_nodes: 1
